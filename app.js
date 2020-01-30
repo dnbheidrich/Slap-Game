@@ -28,7 +28,7 @@ let targetStatusElem = document.getElementById("targetStatus")
 
 
 function slap(){
- targetObj.health--;
+ targetObj.health-- ;
   targetObj.hits++
   update()
   
@@ -60,14 +60,39 @@ hitsElem.innerText = targetObj.hits
 
 function giveFireBall(){
   targetObj.item.push(itemList.fireBall)
+  targetObj.health -= 2 + addMods()
+  
+  
+}
+function giveIceBall(){
+  targetObj.item.push(itemList.iceBall)
+  targetObj.health -= 5 + addMods()
+  
+  
+}
+function giveLightningBall(){
+  targetObj.item.push(itemList.lightningBall)
+  targetObj.health -= 10 + addMods()
+  
+  
 }
 
 
 
 function addMods(){
-let i = 0
-for(i < 0; i < targetObj["item"].length; i++){
+let totalModifier = 0
+for(let i = 0; i < targetObj.item.length; i++){
+totalModifier += targetObj.item[i].modifier
+console.log("total", totalModifier);
 
 
 }
+return totalModifier
 }
+
+
+
+  
+
+
+
