@@ -66,5 +66,8 @@ function giveFireBall(){
 
 function addMods(){
 let i = 0
-for()
+for(i < 0; i < targetObj["item"].length; i++){
+
+
+}
 }
