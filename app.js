@@ -27,10 +27,10 @@ function kick(){
 }
 
 function update(){
+  if(health < 0){
+    health = 0
+  }
 healthElem.innerText = health
 hitsElem.innerText = hits
-if(health < 0){
-  health = 0
-}
 }
 
