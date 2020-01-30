@@ -23,8 +23,29 @@
     </header>
   <div class="container">
     <div class="row text-center">
-      <div class="col-6"><button type="button" class="btn btn-primary fa">Slap</button></div>
-      <div class="col-6"><i class="fas fa-bullseye fa-10x"></i></div>
+      <div class="col-4">
+        <button  onclick="slap()" type="button" class="btn btn-primary">Slap</button>
+      </div>
+      <div class="col-4">
+        <button  onclick= "punch()" type="button" class="btn btn-primary">Punch</button>
+
+      </div>
+      <div class="col-4">
+        <button onclick="kick()" type="button" class="btn btn-primary fa">Kick</button></div>
+      
+    </div>
+    <hr>
+    <div class="row text-center">
+      <div class="col-12">
+        <i class="fas fa-bullseye fa-10x"></i></div>
+      <div class="col-6">
+        <span>Health:<span id="health">100</span></span>
+      </div>
+      <div class="col-6">
+        <span>Hits:<span id="hits">0</span></span>
+      </div>
+     
+      </div>
     </div>
   </div>
 
@@ -43,3 +64,8 @@
    <script src="app.js"></script>
   </body>
 </html>
+
+
+
+
+
